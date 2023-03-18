@@ -9,6 +9,32 @@
   "deployment": {
     "flywayConfFiles": [
       "./flyway.conf"
+    ],
+    "targetDatabases": [
+      {
+        "connectionProvider": {
+          "type": "UsernamePassword",
+          "url": "jdbc:mysql://localhost:3306/test_schema",
+          "username": "terry",
+          "password": {
+            "secretType": "DefaultSecretStore",
+            "name": "Flyway Desktop fec090a8-0d39-4b7d-8460-60f88d7eea6e"
+          }
+        },
+        "displayName": "Test Schema"
+      },
+      {
+        "connectionProvider": {
+          "type": "UsernamePassword",
+          "url": "jdbc:mysql://localhost:3306/dev_schema",
+          "username": "terry",
+          "password": {
+            "secretType": "DefaultSecretStore",
+            "name": "Flyway Desktop f65718b1-2e20-4636-83d1-1e795ee7c0ee"
+          }
+        },
+        "displayName": "Dev Schema"
+      }
     ]
   }
 }
